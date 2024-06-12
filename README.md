@@ -3,7 +3,7 @@
 Windows high-privilege persistence technique that consists in adding a new Time Provider and writing a custom DLL based off of [this](https://learn.microsoft.com/en-us/windows/win32/sysinfo/sample-time-provider) Sample Time Provider DDL template from Microsoft to execute code as the `LocalService` user.
 
 ## Usage
-To use this technique, put whatever code you want to execute inside the `totallyLegit` function in the [library.cpp](https://github.com/otterpwn/w32TimePersistence/blob/main/library.cpp) file, compile the DLL and perform the following steps
+To use this technique, put whatever code you want to execute inside the `definitelyLegit` function in the [library.cpp](https://github.com/otterpwn/w32TimePersistence/blob/main/library.cpp) file, compile the DLL and perform the following steps
 
 1. Stop the w32time service
 2. Add a registry entry for a new Time Provider pointing the DllName key to our DLL
