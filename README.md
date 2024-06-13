@@ -33,4 +33,6 @@ cd build
 cl /D_USRDLL /D_WINDLL ..\library.cpp ..\library.def /MT /link /DLL /OUT:w32TimePersistence.dll
 ```
 
-Watch the GIF below to see the full attack
+Watch the video below to see the full attack
+
+![](https://github.com/otterpwn/w32TimePersistence/blob/main/assets/w32TimePersistence.mp4)
