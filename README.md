@@ -35,4 +35,4 @@ cl /D_USRDLL /D_WINDLL ..\library.cpp ..\library.def /MT /link /DLL /OUT:w32Time
 
 Watch the video below to see the full attack
 
-![](https://github.com/otterpwn/w32TimePersistence/blob/main/assets/w32TimePersistence.mp4)
+https://github.com/otterpwn/w32TimePersistence/assets/54770684/cfb99d44-9b3e-4a5d-bb29-2e51119cac52
